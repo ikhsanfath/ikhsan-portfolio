@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ikhsan Fathurrahman - E-Commerce Growth & Performance Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            accent: '#6366f1',
+                            dark: '#090d16',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #090d16;
+            color: #f3f4f6;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(34, 197, 94, 0.15);
+        }
+        .glow-accent {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.15);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        .tab-btn.active {
+            background-color: #1f2937;
+            border-color: #22c55e;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-[#090d16] text-gray-100 min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="border-b border-gray-800 bg-[#0d1322]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <!-- Profile Header -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-500 to-indigo-500 flex items-center justify-center text-white font-bold text-2xl shadow-lg ring-2 ring-brand-500/30">
+                            MI
+                        </div>
+                        <span class="absolute -bottom-1 -right-1 flex h-4 w-4">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-gray-900"></span>
+                        </span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Muhammad Ikhsan Fathurrahman</h1>
+                            <span class="bg-brand-500/10 text-brand-400 text-xs px-2.5 py-0.5 rounded-full border border-brand-500/20 font-medium">
+                                5+ Tahun Exp.
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-400 font-medium flex items-center gap-2 mt-0.5">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-brand-400"></i>
+                            E-Commerce Growth & Performance Marketing Specialist
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons & Contacts -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="mailto:muh.ikhsanfathurrahman@outlook.co.id" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white text-xs font-medium transition-all border border-gray-700/50">
+                        <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://wa.me/6285523812438?text=Halo%20Ikhsan,%20saya%20tertarik%20untuk%20konsultasi%20E-Commerce%20Optimization" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-brand-600 hover:from-emerald-500 hover:to-brand-500 text-white text-xs font-semibold shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-0.5">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Konsultasi Optimization</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- Metric 1 -->
+            <div class="bg-[#111827] rounded-2xl p-4 border border-gray-800/80 glow-effect hover:border-brand-500/50 transition-all">
+                <div class="flex items-center justify-between text-gray-400 text-xs font-medium mb-2">
+                    <span>TikTok/Tokopedia</span>
+                    <i data-lucide="rocket" class="w-4 h-4 text-brand-400"></i>
+                </div>
+                <div class="text-2xl font-extrabold text-white tracking-tight">+1,242%</div>
+                <div class="text-[11px] text-brand-400 font-medium mt-1 flex items-center gap-1">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Total GMV Growth
+                </div>
+            </div>
+
+            <!-- Metric 2 -->
+            <div class="bg-[#111827] rounded-2xl p-4 border border-gray-800/80 hover:border-orange-500/50 transition-all">
+                <div class="flex items-center justify-between text-gray-400 text-xs font-medium mb-2">
+                    <span>Shopee Ads Peak</span>
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-orange-400"></i>
+                </div>
+                <div class="text-2xl font-extrabold text-white tracking-tight">16.00x</div>
+                <div class="text-[11px] text-orange-400 font-medium mt-1 flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> GMV Max Peak ROAS
+                </div>
+            </div>
+
+            <!-- Metric 3 -->
+            <div class="bg-[#111827] rounded-2xl p-4 border border-gray-800/80 glow-accent hover:border-indigo-500/50 transition-all">
+                <div class="flex items-center justify-between text-gray-400 text-xs font-medium mb-2">
+                    <span>Meta CPAS Peak</span>
+                    <i data-lucide="target" class="w-4 h-4 text-indigo-400"></i>
+                </div>
+                <div class="text-2xl font-extrabold text-white tracking-tight">87.07x</div>
+                <div class="text-[11px] text-indigo-400 font-medium mt-1 flex items-center gap-1">
+                    <i data-lucide="zap" class="w-3.5 h-3.5"></i> Remarketing ROAS
+                </div>
+            </div>
+
+            <!-- Metric 4 -->
+            <div class="bg-[#111827] rounded-2xl p-4 border border-gray-800/80 hover:border-blue-500/50 transition-all">
+                <div class="flex items-center justify-between text-gray-400 text-xs font-medium mb-2">
+                    <span>Total Ads Budget</span>
+                    <i data-lucide="dollar-sign" class="w-4 h-4 text-blue-400"></i>
+                </div>
+                <div class="text-2xl font-extrabold text-white tracking-tight">Rp525M+</div>
+                <div class="text-[11px] text-blue-400 font-medium mt-1 flex items-center gap-1">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Managed Spent
+                </div>
+            </div>
+
+            <!-- Metric 5 -->
+            <div class="col-span-2 sm:col-span-1 bg-[#111827] rounded-2xl p-4 border border-gray-800/80 hover:border-purple-500/50 transition-all">
+                <div class="flex items-center justify-between text-gray-400 text-xs font-medium mb-2">
+                    <span>Meta Lead Gen</span>
+                    <i data-lucide="users" class="w-4 h-4 text-purple-400"></i>
+                </div>
+                <div class="text-2xl font-extrabold text-white tracking-tight">10,000+</div>
+                <div class="text-[11px] text-purple-400 font-medium mt-1 flex items-center gap-1">
+                    <i data-lucide="user-check" class="w-3.5 h-3.5"></i> High Quality Leads
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Navigation Tabs -->
+            <div class="lg:col-span-3 space-y-3">
+                <div class="flex items-center justify-between px-1 mb-2">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-gray-400">Case Studies / Brands</h2>
+                    <span class="text-[10px] bg-gray-800 px-2 py-0.5 rounded text-gray-400">3 Portfolio Selected</span>
+                </div>
+
+                <div class="space-y-2" id="brand-tabs">
+                    <!-- Brand 1 Tab -->
+                    <button onclick="switchTab('keiko')" id="tab-keiko" class="tab-btn active w-full text-left p-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/60 transition-all flex items-center justify-between group">
+                        <div>
+                            <div class="font-bold text-sm text-white group-hover:text-brand-400 transition-colors">Keiko Automotive</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Automotive E-Commerce & Ads</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500 group-hover:text-brand-400 transition-colors"></i>
+                    </button>
+
+                    <!-- Brand 2 Tab -->
+                    <button onclick="switchTab('laskala')" id="tab-laskala" class="tab-btn w-full text-left p-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/60 transition-all flex items-center justify-between group">
+                        <div>
+                            <div class="font-bold text-sm text-white group-hover:text-brand-400 transition-colors">Laskala Batik</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Meta CPAS & Landing Page</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500 group-hover:text-brand-400 transition-colors"></i>
+                    </button>
+
+                    <!-- Brand 3 Tab -->
+                    <button onclick="switchTab('doktermobil')" id="tab-doktermobil" class="tab-btn w-full text-left p-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/60 transition-all flex items-center justify-between group">
+                        <div>
+                            <div class="font-bold text-sm text-white group-hover:text-brand-400 transition-colors">Dokter Mobil Indonesia</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Meta Lead Generation</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500 group-hover:text-brand-400 transition-colors"></i>
+                    </button>
+                </div>
+
+                <!-- Expertise Badge -->
+                <div class="p-4 rounded-xl bg-gradient-to-br from-indigo-950/40 to-purple-950/20 border border-indigo-800/30 text-xs text-indigo-300 space-y-2 mt-6">
+                    <div class="font-semibold text-indigo-200 flex items-center gap-1.5">
+                        <i data-lucide="award" class="w-4 h-4 text-indigo-400"></i> Core Competencies
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-[11px]">
+                        Spesialisasi penuh pada Omnichannel Growth, Optimization GMV Max Marketplace, End-to-End Meta CPAS, Affiliate Management, serta Landing Page High Conversion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Content Container -->
+            <div class="lg:col-span-9">
+
+                <div id="content-keiko" class="tab-content space-y-6">
+                    <!-- Brand Header Card -->
+                    <div class="bg-[#111827] p-6 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-2xl font-bold text-white">Keiko Automotive</h3>
+                                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold px-2.5 py-0.5 rounded-full">E-Commerce & Marketing</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-1">Multi-Platform Marketplace Optimization, Affiliate System, and Meta Leads Activation</p>
+                        </div>
+                        <div class="bg-gray-800/80 px-4 py-2.5 rounded-xl border border-gray-700/60 text-right">
+                            <div class="text-[11px] text-gray-400">Total Omzet Bulan (Apr 2026)</div>
+                            <div class="text-xl font-extrabold text-brand-400">Rp 1,223,000,000</div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Chart & Breakdown Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Chart Card -->
+                        <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-sm font-bold text-gray-200 flex items-center gap-2">
+                                    <i data-lucide="pie-chart" class="w-4 h-4 text-brand-400"></i> Channel Breakdown (Apr 2026)
+                                </h4>
+                                <span class="text-xs text-gray-400">Multi-Channel Sales</span>
+                            </div>
+                            <div class="relative h-60 w-full flex items-center justify-center">
+                                <canvas id="keikoChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Shopee Ads Optimization Case Card -->
+                        <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 space-y-4">
+                            <h4 class="text-sm font-bold text-gray-200 flex items-center gap-2 border-b border-gray-800 pb-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-orange-400"></i> Shopee Ads Optimization (GMV Max)
+                            </h4>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+                                    <div class="text-[11px] text-gray-400">Revenue (Before -> After)</div>
+                                    <div class="text-base font-bold text-white mt-1">Rp402.1M → <span class="text-brand-400">Rp715.6M</span></div>
+                                    <div class="text-[10px] text-brand-400 font-medium mt-0.5">+78% Revenue Surge</div>
+                                </div>
+                                <div class="bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+                                    <div class="text-[11px] text-gray-400">ROAS Scale</div>
+                                    <div class="text-base font-bold text-white mt-1">12.65x → <span class="text-orange-400">16.00x</span></div>
+                                    <div class="text-[10px] text-orange-400 font-medium mt-0.5">Peak Ads Efficiency</div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-xs text-gray-300">
+                                <div class="font-semibold text-gray-400">Strategi Eksekusi:</div>
+                                <ul class="list-disc list-inside space-y-1 text-gray-400">
+                                    <li>Kombinasi GMV Max Auto Bidding + Search Ads Kata Kunci Spesifik.</li>
+                                    <li>Restrukturisasi Hero SKUs & Bidding Budget berdasarkan margin produk.</li>
+                                    <li>A/B Testing Varian Gambar Sampul Produk (CTR Optimization).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Performance Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- TikTok & Tokopedia -->
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800 space-y-2">
+                            <div class="flex items-center justify-between text-xs text-brand-400 font-semibold">
+                                <span>TikTok & Tokopedia</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xl font-bold text-white">+1,242% Growth</div>
+                            <p class="text-xs text-gray-400">Pertumbuhan omzet signifikan pada periode Jun-Agt 2025 melalui penetrasi Tokopedia & LIVE TikTok.</p>
+                        </div>
+
+                        <!-- Affiliate Programs -->
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800 space-y-2">
+                            <div class="flex items-center justify-between text-xs text-indigo-400 font-semibold">
+                                <span>Affiliate Performance</span>
+                                <i data-lucide="share-2" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xl font-bold text-white">ROI 25.3x</div>
+                            <p class="text-xs text-gray-400">Shopee Affiliate Gross Sales Rp139.2M & TikTok Affiliate GMV Rp130.7M (+3,839% GMV Growth).</p>
+                        </div>
+
+                        <!-- Meta Leads Activation -->
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800 space-y-2">
+                            <div class="flex items-center justify-between text-xs text-purple-400 font-semibold">
+                                <span>Meta Leads Activation</span>
+                                <i data-lucide="filter" class="w-4 h-4"></i>
+                            </div>
+                            <div class="text-xl font-bold text-white">Closing Rate 75%</div>
+                            <p class="text-xs text-gray-400">1,000+ High Quality Leads via Optimized Landing Page (CTR 4-5%, LPV 76-80%, ROAS 6-7x).</p>
+                        </div>
+                    </div>
+
+                    <!-- Campaign Summary Table -->
+                    <div class="bg-[#111827] rounded-2xl border border-gray-800 overflow-hidden">
+                        <div class="px-5 py-3 border-b border-gray-800 font-bold text-sm text-gray-200">
+                            Keiko Automotive - Omnichannel Performance Breakdown (Apr 2026)
+                        </div>
+                        <div class="overflow-x-auto custom-scrollbar">
+                            <table class="w-full text-left text-xs text-gray-300">
+                                <thead class="bg-gray-900/80 text-gray-400 uppercase text-[10px]">
+                                    <tr>
+                                        <th class="py-3 px-4">Marketplace / Channel</th>
+                                        <th class="py-3 px-4">Omzet / Revenue</th>
+                                        <th class="py-3 px-4">Key Campaign Focus</th>
+                                        <th class="py-3 px-4 text-right">Status Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800">
+                                    <tr class="hover:bg-gray-800/40">
+                                        <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-orange-500"></span> Shopee
+                                        </td>
+                                        <td class="py-3 px-4 font-bold text-brand-400">Rp 766,000,000</td>
+                                        <td class="py-3 px-4 text-gray-400">GMV Max + Search Ads + Affiliate ROI 25.3x</td>
+                                        <td class="py-3 px-4 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px]">Peak ROAS 16.00x</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-800/40">
+                                        <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-cyan-400"></span> TikTok Shop
+                                        </td>
+                                        <td class="py-3 px-4 font-bold text-brand-400">Rp 276,000,000</td>
+                                        <td class="py-3 px-4 text-gray-400">Affiliate Management (+3,839% Growth) & Shopping Ads</td>
+                                        <td class="py-3 px-4 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px]">Scaled</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-800/40">
+                                        <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Tokopedia
+                                        </td>
+                                        <td class="py-3 px-4 font-bold text-brand-400">Rp 155,000,000</td>
+                                        <td class="py-3 px-4 text-gray-400">TopAds Optimization & Organic Penetration</td>
+                                        <td class="py-3 px-4 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px]">Steady Growth</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-800/40">
+                                        <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-purple-500"></span> Lazada
+                                        </td>
+                                        <td class="py-3 px-4 font-bold text-brand-400">Rp 26,000,000</td>
+                                        <td class="py-3 px-4 text-gray-400">Sponsored Solutions & Mega Campaign Participation</td>
+                                        <td class="py-3 px-4 text-right"><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px]">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-laskala" class="tab-content hidden space-y-6">
+                    <!-- Brand Header Card -->
+                    <div class="bg-[#111827] p-6 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-2xl font-bold text-white">Laskala Batik</h3>
+                                <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold px-2.5 py-0.5 rounded-full">Meta Collaborative Ads (CPAS)</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-1">Scaling High Budget Performance via Landing Page & CPAS Optimization</p>
+                        </div>
+                        <div class="bg-gray-800/80 px-4 py-2.5 rounded-xl border border-gray-700/60 text-right">
+                            <div class="text-[11px] text-gray-400">Monthly Budget Spent</div>
+                            <div class="text-xl font-extrabold text-indigo-400">Rp600M - Rp800M / bln</div>
+                        </div>
+                    </div>
+
+                    <!-- Line Chart & Strategy Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Chart Card -->
+                        <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-sm font-bold text-gray-200 flex items-center gap-2">
+                                    <i data-lucide="line-chart" class="w-4 h-4 text-indigo-400"></i> Monthly ROAS Trajectory
+                                </h4>
+                                <span class="text-xs text-gray-400">Aug - Oct Growth</span>
+                            </div>
+                            <div class="relative h-60 w-full flex items-center justify-center">
+                                <canvas id="laskalaChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Framework & Tools Card -->
+                        <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 space-y-4">
+                            <h4 class="text-sm font-bold text-gray-200 flex items-center gap-2 border-b border-gray-800 pb-2">
+                                <i data-lucide="layout" class="w-4 h-4 text-purple-400"></i> Landing Page Framework & Tools
+                            </h4>
+
+                            <div class="space-y-3 text-xs text-gray-300">
+                                <div>
+                                    <div class="font-semibold text-indigo-300 mb-1">SCARF & AIDA Copywriting Framework:</div>
+                                    <p class="text-gray-400 leading-relaxed">
+                                        Perancangan UI/UX Landing page interaktif yang mengarahkan emosi calon pembeli menggunakan teknik Attention, Interest, Desire, dan Action untuk mengkonversi cold traffic Meta Ads secara maksimal.
+                                    </p>
+                                </div>
+
+                                <div class="pt-2">
+                                    <div class="font-semibold text-indigo-300 mb-1.5">Tech Stack & Analytics Tools:</div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 rounded-lg text-gray-200 font-medium text-[11px]">Jubelio ERP</span>
+                                        <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 rounded-lg text-gray-200 font-medium text-[11px]">Google Analytics 4 (GA4)</span>
+                                        <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 rounded-lg text-gray-200 font-medium text-[11px]">Ahrefs</span>
+                                        <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 rounded-lg text-gray-200 font-medium text-[11px]">Meta Pixel & Conversions API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Metrics -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400 font-medium">Agustus ROAS</div>
+                            <div class="text-2xl font-bold text-white mt-1">4.6x</div>
+                            <div class="text-[11px] text-gray-500 mt-0.5">Initial Strategy Testing</div>
+                        </div>
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400 font-medium">September ROAS</div>
+                            <div class="text-2xl font-bold text-white mt-1">5.0x</div>
+                            <div class="text-[11px] text-indigo-400 mt-0.5">+8.6% Growth Month-on-Month</div>
+                        </div>
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400 font-medium">Oktober ROAS</div>
+                            <div class="text-2xl font-bold text-brand-400 mt-1">6.0x</div>
+                            <div class="text-[11px] text-brand-400 mt-0.5">Peak Performance Achieved</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-doktermobil" class="tab-content hidden space-y-6">
+                    <!-- Brand Header Card -->
+                    <div class="bg-[#111827] p-6 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-2xl font-bold text-white">Dokter Mobil Indonesia</h3>
+                                <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold px-2.5 py-0.5 rounded-full">Automotive Service Lead Gen</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-1">High-Volume WhatsApp Lead Generation & Sales Funnel System</p>
+                        </div>
+                        <div class="bg-gray-800/80 px-4 py-2.5 rounded-xl border border-gray-700/60 text-right">
+                            <div class="text-[11px] text-gray-400">Total Meta Spent Managed</div>
+                            <div class="text-xl font-extrabold text-purple-400">Rp 525,044,054</div>
+                        </div>
+                    </div>
+
+                    <!-- Lead Gen Stats Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400">Total Leads Generated</div>
+                            <div class="text-2xl font-bold text-white mt-1">10,000+</div>
+                            <div class="text-[11px] text-purple-400 mt-0.5">Real WA Contact Leads</div>
+                        </div>
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400">Lead Quality Rate</div>
+                            <div class="text-2xl font-bold text-white mt-1">75% - 85%</div>
+                            <div class="text-[11px] text-emerald-400 mt-0.5">Qualified Active Prospects</div>
+                        </div>
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400">Cost Per Lead (CPL)</div>
+                            <div class="text-2xl font-bold text-white mt-1">Rp12k - 35k</div>
+                            <div class="text-[11px] text-brand-400 mt-0.5">Highly Efficient CPL</div>
+                        </div>
+                        <div class="bg-[#111827] p-4 rounded-xl border border-gray-800">
+                            <div class="text-xs text-gray-400">Daily Closing Rate</div>
+                            <div class="text-2xl font-bold text-white mt-1">20% - 35%</div>
+                            <div class="text-[11px] text-indigo-400 mt-0.5">Sales CS Conversion</div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Campaign Focus -->
+                    <div class="bg-[#111827] p-6 rounded-2xl border border-gray-800 space-y-4">
+                        <h4 class="text-base font-bold text-white flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400"></i> Highlight Impact & Annual Growth
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                            <div class="space-y-2 border-l-2 border-purple-500 pl-4">
+                                <div class="text-sm font-bold text-gray-200">Revenue Impact (+45% YoY Growth)</div>
+                                <p class="text-xs text-gray-400 leading-relaxed">
+                                    Penerapan strategi funneling Meta Lead Ads yang presisi berhasil memicu lonjakan pendapatan bisnis cabang dari tahun 2021 ke 2022 sebesar +45%, didorong oleh suplai leads berkualitas yang konsisten.
+                                </p>
+                            </div>
+
+                            <div class="space-y-2 border-l-2 border-brand-500 pl-4">
+                                <div class="text-sm font-bold text-gray-200">CRM & Nurturing Pipeline Integrations</div>
+                                <p class="text-xs text-gray-400 leading-relaxed">
+                                    Optimalisasi alur komunikasi dari iklan Meta langsung menuju WhatsApp CS dengan skenario auto-reply dan kualifikasi awal untuk menjamin tingginya rasio closing harian (20%-35%).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="space-y-6 pt-6 border-t border-gray-800">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-400">Layanan Professional</h2>
+                <h3 class="text-2xl font-bold text-white">E-Commerce Optimization & Growth Services</h3>
+                <p class="text-xs text-gray-400">Solusi komprehensif berorientasi pada data dan ROI tinggi untuk mengakselerasi performa brand Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Service 1 -->
+                <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-brand-500/50 transition-all space-y-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="store" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-white">Multi-Platform Marketplace</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Pengelolaan & optimasi toko di Shopee, TikTok Shop, Tokopedia, dan Lazada secara terintegrasi.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all space-y-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                        <i data-lucide="sliders" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-white">Paid Ads Execution</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Eksekusi Shopee Ads GMV Max, TikTok PSA/GMV Max, Meta CPAS, serta Lead Generation iklan berbayar.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all space-y-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                        <i data-lucide="users-2" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-white">Affiliate Management</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Sistem rekrutmen, onboarding creator, dan skema insentif untuk mendongkrak penjualan organik.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-all space-y-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                        <i data-lucide="code" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-white">High-Converting LP</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Desain UI/UX Landing Page & Copywriting berbasis framework psikologi penjualan AIDA & SCARF.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-all space-y-3 group col-span-1 md:col-span-3 lg:col-span-1">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-white">Analytics & CRM</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Setup GA4, pemetaan corong penjualan (funnel), re-engagement leads, dan optimasi LTV pelanggan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-emerald-950/60 via-[#111827] to-indigo-950/60 p-8 rounded-3xl border border-emerald-800/30 text-center space-y-4 glow-effect">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Siap Meningkatkan Performa E-Commerce & Ads Anda?</h3>
+            <p class="text-xs sm:text-sm text-gray-300 max-w-xl mx-auto">
+                Diskusikan target growth bisnis Anda, strategi alokasi budget ads, hingga strategi scaling multi-channel bersama Muhammad Ikhsan Fathurrahman.
+            </p>
+            <div class="pt-2">
+                <a href="https://wa.me/6285523812438?text=Halo%20Ikhsan,%20saya%20tertarik%20untuk%20konsultasi%20E-Commerce%20Optimization" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-brand-500 hover:from-emerald-400 hover:to-brand-400 text-white font-bold text-sm shadow-xl shadow-emerald-900/40 transition-all transform hover:scale-105">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    <span>Hubungi Via WhatsApp (+62 855-2381-2438)</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 bg-[#0d1322] py-6 text-center text-xs text-gray-500">
+        <p>© 2026 Muhammad Ikhsan Fathurrahman. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Interactive Tab Switcher
+        function switchTab(brandId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+
+            // Remove active class from buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected content and highlight active button
+            document.getElementById('content-' + brandId).classList.remove('hidden');
+            document.getElementById('tab-' + brandId).classList.add('active');
+        }
+
+        // Chart.js Configuration & Instances
+        window.addEventListener('DOMContentLoaded', () => {
+            // Keiko Doughnut Chart (Channel Breakdown)
+            const keikoCtx = document.getElementById('keikoChart').getContext('2d');
+            new Chart(keikoCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Shopee', 'TikTok Shop', 'Tokopedia', 'Lazada'],
+                    datasets: [{
+                        data: [766, 276, 155, 26],
+                        backgroundColor: [
+                            '#f97316', // Shopee Orange
+                            '#06b6d4', // TikTok Cyan
+                            '#22c55e', // Tokopedia Green
+                            '#a855f7'  // Lazada Purple
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#111827'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#9ca3af',
+                                font: {
+                                    family: 'Plus Jakarta Sans',
+                                    size: 11
+                                },
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` ${context.label}: Rp ${context.raw} Juta`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+
+            // Laskala Line Chart (ROAS Growth)
+            const laskalaCtx = document.getElementById('laskalaChart').getContext('2d');
+            new Chart(laskalaCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Agustus', 'September', 'Oktober'],
+                    datasets: [{
+                        label: 'Meta CPAS ROAS',
+                        data: [4.6, 5.0, 6.0],
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99, 102, 241, 0.15)',
+                        fill: true,
+                        tension: 0.3,
+                        pointBackgroundColor: '#818cf8',
+                        pointBorderColor: '#ffffff',
+                        pointHoverRadius: 6,
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` ROAS: ${context.raw}x`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            min: 3,
+                            max: 7,
+                            grid: {
+                                color: '#1f2937'
+                            },
+                            ticks: {
+                                color: '#9ca3af',
+                                font: {
+                                    family: 'Plus Jakarta Sans'
+                                },
+                                callback: function(value) {
+                                    return value + 'x';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: '#1f2937'
+                            },
+                            ticks: {
+                                color: '#9ca3af',
+                                font: {
+                                    family: 'Plus Jakarta Sans'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
